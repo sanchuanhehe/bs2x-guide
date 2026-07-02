@@ -30,5 +30,5 @@ BS21 与 WS63 同属 HiSilicon **「HimiDeer」riscv31 核**：
 
 ## 里程碑
 
-**M1（已达成）**：BS21 的 `blinky` + `uart_hello`（标准 RV32IMFC、`--features chip-bs21`）
+**M1（已达成）**：BS21 的 `blinky` + `uart_hello`（标准 RV32IMFC、`--features chip-bs21,unstable`）
 在 `qemu-system-riscv32 -M bs21` 上端到端启动。详见[第 5 章](ch5_qemu_m1.md)。
