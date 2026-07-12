@@ -1,7 +1,7 @@
 # 前言
 
 本指南描述 HiSilicon **BS21 / BS2X** 系列 SoC —— 一颗 BLE 5.4 + SLE/星闪（NearLink）的连接芯片
-（**无 Wi-Fi**），用于 `bs2x-pac`、`hisi-riscv-hal`（`chip-bs21` 特性）、`hisi-riscv-qemu`
+（**无 Wi-Fi**），用于 `bs2x-pac`、`hisi-hal`（`chip-bs21` 特性）、`hisi-riscv-qemu`
 （`-M bs21` 机器）这套 Rust + QEMU 工具链。
 
 ## 真值源
@@ -24,7 +24,7 @@ BS21 与 WS63 同属 HiSilicon **「HimiDeer」riscv31 核**：
 
 在 monorepo（`hisi-riscv-rs`）布局上，**芯片专属的 PAC crate 归并在 `crates/pac/` 下**
 （`crates/pac/ws63-pac`、`crates/pac/bs2x-pac`，各自内嵌其 `*-svd` 生成源），芯片中立的
-`hisi-riscv-hal` / `hisi-riscv-rt` 在 `crates/` 顶层。这样「可发布库」整组都留在 `crates/` 内，
+`hisi-hal` / `hisi-riscv-rt` 在 `crates/` 顶层。这样「可发布库」整组都留在 `crates/` 内，
 又把生成式 PAC 与手写 crate 分开；命名用 `crates/pac/`（而非 `crates/chips/`）以避开与顶层
 `chips/`（放 guide/rf/flashboot 等芯片支撑材料）重名。
 

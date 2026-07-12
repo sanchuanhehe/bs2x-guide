@@ -14,7 +14,7 @@ HiSilicon「HimiDeer」核：
 - 异常上下文含 `ccause`（WS63 的 `0xFC2` 自定义 CSR）。
 
 CSR 原始地址（`LOCIEN 0xBE0-2` / `LOCIPD 0xBE8-A` / `LOCIPCLR 0xBF0` / `LOCIPRI 0xBC0-CF` / `PRITHD 0xBFE`）
-与 WS63 极高概率相同 → `hisi-riscv-hal` 的 `interrupt.rs` + QEMU LOCI intc + target/riscv LOCI 投递补丁原样复用。
+与 WS63 极高概率相同 → `hisi-hal` 的 `interrupt.rs` + QEMU LOCI intc + target/riscv LOCI 投递补丁原样复用。
 
 > 注意：BS21 的 26-31 是 **BT/ADC**（`BT_INT0/1`、`GADC_DONE/ALARM`），不像 WS63 那里是 TIMER；
 > BS21 的 TIMER 落在 LOCI 区（53-56）。

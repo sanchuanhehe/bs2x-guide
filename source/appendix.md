@@ -46,7 +46,7 @@ GPIO
   General-Purpose Input/Output，通用输入输出（BS2X GPIO IP v150）
 
 HAL
-  Hardware Abstraction Layer，硬件抽象层（本项目的 `hisi-riscv-hal`）
+  Hardware Abstraction Layer，硬件抽象层（本项目的 `hisi-hal`）
 
 HCI
   Host Controller Interface，主机控制器接口（蓝牙 host↔controller 边界；BS2X 为进程内消息 ABI，非 H4-UART）

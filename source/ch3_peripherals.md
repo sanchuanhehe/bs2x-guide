@@ -51,7 +51,7 @@ GLB_CTL_A/D、PMU1/PMU2_CMU、ULP_AON、FUSE 等电源/时钟控制块同理逐�
 
 ## 3.5 HAL 驱动覆盖与 QEMU 功能验证（全外设已通）
 
-`hisi-riscv-hal`（`chip-bs21`）现在覆盖 **BS2X 全部功能外设**，每个都在 `hisi-riscv-qemu`
+`hisi-hal`（`chip-bs21`）现在覆盖 **BS2X 全部功能外设**，每个都在 `hisi-riscv-qemu`
 的 `-M bs21/bs22/bs20` 上**功能验证**（不仅是寄存器可访问，而是驱动真跑通、读回已知值）。
 
 | 外设 | IP | HAL 模块 | bs2x-pac 是否需改 | QEMU 验证（示例） |
@@ -100,4 +100,4 @@ GLB_CTL_A/D、PMU1/PMU2_CMU、ULP_AON、FUSE 等电源/时钟控制块同理逐�
 4. QEMU 模型写进 `ws63.c` + `ws63_create_<p>()`(声明在 `hisi_riscv31.h`),在三台 bs2x 机器映射;
 5. 写 `examples/bs21`+`bs20` 示例 + 冒烟断言。
 
-提交链自底向上:`bs2x-svd → bs2x-pac → hisi-riscv-hal → hisi-riscv-qemu → ws63-rs`，每步保证 WS63 零回归(5/5 qtest)。
+提交链自底向上:`bs2x-svd → bs2x-pac → hisi-hal → hisi-riscv-qemu → ws63-rs`，每步保证 WS63 零回归(5/5 qtest)。

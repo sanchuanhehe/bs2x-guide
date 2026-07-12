@@ -25,4 +25,4 @@ BS21 应用核为 **RV32IMFC_Zicsr**（I/M/F/C，ilp32f 硬单浮点，无 A 原
 与 WS63 **完全相同**的 HiSilicon「HimiDeer」LOCI 本地中断（`vectors.h` 核对）：
 `RISCV_SYS_VECTOR_CNT=26`、mie 类 6 个（IRQ 26-31）、custom LOCI 类（IRQ≥32，`LOCIEN_IRQ_NUM=32`）、
 `LOCIPRI_IRQ_NUM=8`/`LOCIPRI_IRQ_BITS=4`、异常上下文含 `ccause`（0xFC2）。
-→ `hisi-riscv-hal` 的 `interrupt` 模块 + QEMU LOCI intc 原样复用。详见[第 4 章](ch4_interrupts.md)。
+→ `hisi-hal` 的 `interrupt` 模块 + QEMU LOCI intc 原样复用。详见[第 4 章](ch4_interrupts.md)。
